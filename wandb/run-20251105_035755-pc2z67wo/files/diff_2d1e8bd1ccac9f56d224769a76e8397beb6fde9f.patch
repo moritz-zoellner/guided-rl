@@ -1,0 +1,518 @@
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+new file mode 100644
+index 0000000..a8c2003
+--- /dev/null
++++ b/.vscode/settings.json
+@@ -0,0 +1,5 @@
++{
++    "python-envs.defaultEnvManager": "ms-python.python:conda",
++    "python-envs.defaultPackageManager": "ms-python.python:conda",
++    "python-envs.pythonProjects": []
++}
+\ No newline at end of file
+diff --git a/README.md b/README.md
+index a86d33f..cd446dc 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,3 @@
+ # Guiding Reinforcement Learning using Natural Language
+ 
++Packages: Gymansium/Mujoco, SB3, Tensorboard
+\ No newline at end of file
+diff --git a/environment.yml b/environment.yml
+new file mode 100644
+index 0000000..1eacf16
+--- /dev/null
++++ b/environment.yml
+@@ -0,0 +1,126 @@
++name: guided-rl
++channels:
++  - conda-forge
++  - defaults
++dependencies:
++  - _libgcc_mutex=0.1=main
++  - _openmp_mutex=5.1=1_gnu
++  - absl-py=2.3.1=pyhd8ed1ab_0
++  - asttokens=3.0.0=pyhd8ed1ab_1
++  - blas=1.0=mkl
++  - bzip2=1.0.8=h5eee18b_6
++  - ca-certificates=2025.10.5=hbd8a1cb_0
++  - cloudpickle=3.1.1=py311h06a4308_0
++  - comm=0.2.3=pyhe01879c_0
++  - debugpy=1.8.16=py311hbdd6827_0
++  - decorator=5.2.1=pyhd8ed1ab_0
++  - etils=1.12.2=pyhd8ed1ab_0
++  - exceptiongroup=1.3.0=pyhd8ed1ab_0
++  - executing=2.2.1=pyhd8ed1ab_0
++  - expat=2.7.1=h6a678d5_0
++  - farama-notifications=0.0.4=py311h06a4308_0
++  - fsspec=2025.10.0=pyhd8ed1ab_0
++  - glfw=3.4=hb03c661_1
++  - gymnasium=0.28.1=py311h06a4308_1
++  - icu=73.2=h59595ed_0
++  - importlib-metadata=8.7.0=pyhe01879c_1
++  - importlib_resources=6.5.2=pyhd8ed1ab_0
++  - intel-openmp=2025.0.0=h06a4308_1171
++  - ipykernel=7.1.0=pyha191276_0
++  - ipython=9.6.0=pyhfa0c392_0
++  - ipython_pygments_lexers=1.1.1=pyhd8ed1ab_0
++  - jax-jumpy=1.0.0=py311h06a4308_0
++  - jedi=0.19.2=pyhd8ed1ab_1
++  - jupyter_client=8.6.3=pyhd8ed1ab_1
++  - jupyter_core=5.9.1=pyhc90fa1f_0
++  - ld_impl_linux-64=2.44=h153f514_2
++  - libabseil=20250512.1=cxx17_hba17884_0
++  - libccd-double=2.1=h59595ed_3
++  - libffi=3.4.4=h6a678d5_1
++  - libgcc=15.2.0=h767d61c_7
++  - libgcc-ng=15.2.0=h69a702a_7
++  - libgl=1.7.0=ha4b6fd6_2
++  - libglvnd=1.7.0=ha4b6fd6_2
++  - libglx=1.7.0=ha4b6fd6_2
++  - libgomp=15.2.0=h767d61c_7
++  - libmujoco=3.3.2=h31df9c7_4
++  - libnsl=2.0.0=h5eee18b_0
++  - libopengl=1.7.0=ha4b6fd6_2
++  - libopengl-devel=1.7.0=ha4b6fd6_2
++  - libsodium=1.0.20=heac8642_0
++  - libstdcxx=15.2.0=h8f9b012_7
++  - libstdcxx-ng=15.2.0=h4852527_7
++  - libuuid=1.41.5=h5eee18b_0
++  - libxcb=1.17.0=h9b100fa_0
++  - libxkbcommon=1.11.0=he8b52b9_0
++  - libxml2=2.13.9=h2c43086_0
++  - libzlib=1.3.1=hb25bd0a_0
++  - lodepng=20220109=h924138e_0
++  - matplotlib-inline=0.2.1=pyhd8ed1ab_0
++  - mkl=2025.0.0=hacee8c2_941
++  - mkl-service=2.5.2=py311hacdc0fc_0
++  - mkl_fft=2.1.1=py311h8fe796d_0
++  - mkl_random=1.3.0=py311h505adc9_0
++  - mujoco=3.3.2=hc93d07d_4
++  - mujoco-python=3.3.2=np2py311h78ec308_4
++  - mujoco-samples=3.3.2=h00edc25_4
++  - mujoco-simulate=3.3.2=h00edc25_4
++  - ncurses=6.5=h7934f7d_0
++  - nest-asyncio=1.6.0=pyhd8ed1ab_1
++  - numpy=1.26.4=py311h64c44e4_1
++  - numpy-base=1.26.4=py311he1678cf_1
++  - openssl=3.5.4=h26f9b46_0
++  - packaging=25.0=pyh29332c3_1
++  - parso=0.8.5=pyhcf101f3_0
++  - pexpect=4.9.0=pyhd8ed1ab_1
++  - pickleshare=0.7.5=pyhd8ed1ab_1004
++  - pip=25.2=pyhc872135_1
++  - platformdirs=4.5.0=pyhcf101f3_0
++  - prompt-toolkit=3.0.52=pyha770c72_0
++  - psutil=7.0.0=py311hee96239_1
++  - pthread-stubs=0.3=h0ce48e5_1
++  - ptyprocess=0.7.0=pyhd8ed1ab_1
++  - pure_eval=0.2.3=pyhd8ed1ab_1
++  - pybind11-abi=11=hc364b38_1
++  - pyglfw=2.10.0=pyha770c72_0
++  - pygments=2.19.2=pyhd8ed1ab_0
++  - pyopengl=3.1.10=pyha804496_2
++  - python=3.11.14=h6fa692b_0
++  - python-dateutil=2.9.0.post0=pyhe01879c_2
++  - python_abi=3.11=2_cp311
++  - pyzmq=27.1.0=py311hcf8288c_0
++  - qhull=2020.2=h434a139_5
++  - readline=8.3=hc2a1206_0
++  - setuptools=80.9.0=py311h06a4308_0
++  - six=1.17.0=pyhe01879c_1
++  - sqlite=3.50.2=hb25bd0a_1
++  - stack_data=0.6.3=pyhd8ed1ab_1
++  - tbb=2022.0.0=hdb19cb5_0
++  - tbb-devel=2022.0.0=hdb19cb5_0
++  - tinyxml2=11.0.0=h3f2d84a_0
++  - tk=8.6.15=h54e0aa7_0
++  - tornado=6.5.1=py311h5eee18b_0
++  - traitlets=5.14.3=pyhd8ed1ab_1
++  - typing-extensions=4.15.0=py311h06a4308_0
++  - typing_extensions=4.15.0=py311h06a4308_0
++  - tzdata=2025b=h04d1e81_0
++  - wayland=1.24.0=hdac8c69_0
++  - wcwidth=0.2.14=pyhd8ed1ab_0
++  - wheel=0.45.1=py311h06a4308_0
++  - xkeyboard-config=2.46=hb03c661_0
++  - xorg-libx11=1.8.12=h9b100fa_1
++  - xorg-libxau=1.0.12=h9b100fa_0
++  - xorg-libxcursor=1.2.3=hb9d3cd8_0
++  - xorg-libxdmcp=1.1.5=h9b100fa_0
++  - xorg-libxext=1.3.6=hb9d3cd8_0
++  - xorg-libxfixes=6.0.2=hb03c661_0
++  - xorg-libxi=1.8.2=hb9d3cd8_0
++  - xorg-libxinerama=1.1.5=h5888daf_1
++  - xorg-libxrandr=1.5.4=hb9d3cd8_0
++  - xorg-libxrender=0.9.12=hb9d3cd8_0
++  - xorg-xorgproto=2024.1=h5eee18b_1
++  - xz=5.6.4=h5eee18b_1
++  - zeromq=4.3.5=hb0a5e54_1
++  - zipp=3.23.0=pyhd8ed1ab_0
++  - zlib=1.3.1=hb25bd0a_0
++prefix: /home/mzoellner/miniconda3/envs/guided-rl
+diff --git a/playground.ipynb b/playground.ipynb
+new file mode 100644
+index 0000000..bd2b942
+--- /dev/null
++++ b/playground.ipynb
+@@ -0,0 +1,180 @@
++{
++ "cells": [
++  {
++   "cell_type": "code",
++   "execution_count": 6,
++   "id": "28f53da8",
++   "metadata": {},
++   "outputs": [
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "Using cpu device\n",
++      "Wrapping the env with a `Monitor` wrapper\n",
++      "Wrapping the env in a DummyVecEnv.\n",
++      "Logging to ./humanoid-tensorboard/PPO_2\n"
++     ]
++    },
++    {
++     "name": "stdout",
++     "output_type": "stream",
++     "text": [
++      "---------------------------------\n",
++      "| rollout/           |          |\n",
++      "|    ep_len_mean     | 20.7     |\n",
++      "|    ep_rew_mean     | 100      |\n",
++      "| time/              |          |\n",
++      "|    fps             | 1491     |\n",
++      "|    iterations      | 1        |\n",
++      "|    time_elapsed    | 1        |\n",
++      "|    total_timesteps | 2048     |\n",
++      "---------------------------------\n",
++      "-----------------------------------------\n",
++      "| rollout/                |             |\n",
++      "|    ep_len_mean          | 22.5        |\n",
++      "|    ep_rew_mean          | 110         |\n",
++      "| time/                   |             |\n",
++      "|    fps                  | 1269        |\n",
++      "|    iterations           | 2           |\n",
++      "|    time_elapsed         | 3           |\n",
++      "|    total_timesteps      | 4096        |\n",
++      "| train/                  |             |\n",
++      "|    approx_kl            | 0.018593324 |\n",
++      "|    clip_fraction        | 0.208       |\n",
++      "|    clip_range           | 0.2         |\n",
++      "|    entropy_loss         | -24.1       |\n",
++      "|    explained_variance   | -0.00785    |\n",
++      "|    learning_rate        | 0.0003      |\n",
++      "|    loss                 | 491         |\n",
++      "|    n_updates            | 10          |\n",
++      "|    policy_gradient_loss | -0.0581     |\n",
++      "|    std                  | 1           |\n",
++      "|    value_loss           | 1.37e+03    |\n",
++      "-----------------------------------------\n",
++      "-----------------------------------------\n",
++      "| rollout/                |             |\n",
++      "|    ep_len_mean          | 23.2        |\n",
++      "|    ep_rew_mean          | 114         |\n",
++      "| time/                   |             |\n",
++      "|    fps                  | 1200        |\n",
++      "|    iterations           | 3           |\n",
++      "|    time_elapsed         | 5           |\n",
++      "|    total_timesteps      | 6144        |\n",
++      "| train/                  |             |\n",
++      "|    approx_kl            | 0.022298787 |\n",
++      "|    clip_fraction        | 0.235       |\n",
++      "|    clip_range           | 0.2         |\n",
++      "|    entropy_loss         | -24.1       |\n",
++      "|    explained_variance   | 0.0204      |\n",
++      "|    learning_rate        | 0.0003      |\n",
++      "|    loss                 | 575         |\n",
++      "|    n_updates            | 20          |\n",
++      "|    policy_gradient_loss | -0.0671     |\n",
++      "|    std                  | 0.999       |\n",
++      "|    value_loss           | 1.24e+03    |\n",
++      "-----------------------------------------\n",
++      "-----------------------------------------\n",
++      "| rollout/                |             |\n",
++      "|    ep_len_mean          | 24.3        |\n",
++      "|    ep_rew_mean          | 119         |\n",
++      "| time/                   |             |\n",
++      "|    fps                  | 1169        |\n",
++      "|    iterations           | 4           |\n",
++      "|    time_elapsed         | 7           |\n",
++      "|    total_timesteps      | 8192        |\n",
++      "| train/                  |             |\n",
++      "|    approx_kl            | 0.025249943 |\n",
++      "|    clip_fraction        | 0.279       |\n",
++      "|    clip_range           | 0.2         |\n",
++      "|    entropy_loss         | -24.1       |\n",
++      "|    explained_variance   | 0.0126      |\n",
++      "|    learning_rate        | 0.0003      |\n",
++      "|    loss                 | 402         |\n",
++      "|    n_updates            | 30          |\n",
++      "|    policy_gradient_loss | -0.0774     |\n",
++      "|    std                  | 1           |\n",
++      "|    value_loss           | 1.1e+03     |\n",
++      "-----------------------------------------\n",
++      "-----------------------------------------\n",
++      "| rollout/                |             |\n",
++      "|    ep_len_mean          | 23.9        |\n",
++      "|    ep_rew_mean          | 117         |\n",
++      "| time/                   |             |\n",
++      "|    fps                  | 1150        |\n",
++      "|    iterations           | 5           |\n",
++      "|    time_elapsed         | 8           |\n",
++      "|    total_timesteps      | 10240       |\n",
++      "| train/                  |             |\n",
++      "|    approx_kl            | 0.028011933 |\n",
++      "|    clip_fraction        | 0.311       |\n",
++      "|    clip_range           | 0.2         |\n",
++      "|    entropy_loss         | -24.1       |\n",
++      "|    explained_variance   | 0.0147      |\n",
++      "|    learning_rate        | 0.0003      |\n",
++      "|    loss                 | 514         |\n",
++      "|    n_updates            | 40          |\n",
++      "|    policy_gradient_loss | -0.0819     |\n",
++      "|    std                  | 0.998       |\n",
++      "|    value_loss           | 1.13e+03    |\n",
++      "-----------------------------------------\n",
++      "Training finished!\n",
++      "Mean reward over rollout: 4.89\n"
++     ]
++    }
++   ],
++   "source": [
++    "import gymnasium as gym\n",
++    "from stable_baselines3 import PPO\n",
++    "\n",
++    "env = gym.make(\"Humanoid-v4\")\n",
++    "\n",
++    "model = PPO(\"MlpPolicy\", env, verbose=1, tensorboard_log='./humanoid-tensorboard')\n",
++    "model.learn(total_timesteps=10_000)\n",
++    "\n",
++    "print(\"Training finished!\")\n",
++    "obs, _ = env.reset()\n",
++    "rewards = []\n",
++    "for _ in range(1000):\n",
++    "    action, _ = model.predict(obs)\n",
++    "    obs, reward, done, truncated, info = env.step(action)\n",
++    "    rewards.append(reward)\n",
++    "    if done or truncated:\n",
++    "        obs, _ = env.reset()\n",
++    "\n",
++    "print(f\"Mean reward over rollout: {sum(rewards)/len(rewards):.2f}\")"
++   ]
++  },
++  {
++   "cell_type": "code",
++   "execution_count": null,
++   "id": "3362d3c2",
++   "metadata": {},
++   "outputs": [],
++   "source": [
++    "from wandb.integration.sb3 import WandbCallback"
++   ]
++  }
++ ],
++ "metadata": {
++  "kernelspec": {
++   "display_name": "guided-rl",
++   "language": "python",
++   "name": "python3"
++  },
++  "language_info": {
++   "codemirror_mode": {
++    "name": "ipython",
++    "version": 3
++   },
++   "file_extension": ".py",
++   "mimetype": "text/x-python",
++   "name": "python",
++   "nbconvert_exporter": "python",
++   "pygments_lexer": "ipython3",
++   "version": "3.11.5"
++  }
++ },
++ "nbformat": 4,
++ "nbformat_minor": 5
++}
+diff --git a/src/train_humanoid.py b/src/train_humanoid.py
+new file mode 100644
+index 0000000..c33b8ed
+--- /dev/null
++++ b/src/train_humanoid.py
+@@ -0,0 +1,173 @@
++import os
++import argparse
++from datetime import datetime
++import gymnasium as gym
++from gymnasium.wrappers import RecordVideo
++
++from stable_baselines3 import PPO
++from stable_baselines3.common.monitor import Monitor
++from stable_baselines3.common.callbacks import (
++    CallbackList,
++    CheckpointCallback,
++    EvalCallback,
++    BaseCallback,
++)
++from stable_baselines3.common.vec_env import DummyVecEnv
++
++import wandb
++from wandb.integration.sb3 import WandbCallback
++
++def make_train_env(env_id: str):
++    return Monitor(gym.make(env_id))
++
++def make_eval_env(env_id: str, video_dir: str):
++    base = gym.make(env_id, render_mode="rgb_array")
++    wrapped = RecordVideo(
++        base,
++        video_folder=video_dir,
++        episode_trigger=lambda ep: True,  # record every episode during eval pass
++        name_prefix="humanoid_eval",
++    )
++    return Monitor(wrapped)
++
++class ConsoleLogCallback(BaseCallback):
++    """Aggregate recent rewards and report to stdout without extra env rollouts."""
++
++    def __init__(self, window: int = 500):
++        super().__init__()
++        self.window = max(window, 1)
++        self._recent_rewards: list[float] = []
++        self.print_count = 1
++
++    def _on_step(self) -> bool:
++        infos = self.locals.get("infos", [])
++        for info in infos:
++            episode_info = info.get("episode")
++            if episode_info is None:
++                continue
++            reward = episode_info.get("r")
++            if reward is None:
++                continue
++            self._recent_rewards.append(float(reward))
++            timestep = self.model.num_timesteps
++            if timestep > self.window * self.print_count:
++                avg_reward = sum(self._recent_rewards) / len(self._recent_rewards)
++                print(
++                    f"Time_step: {timestep}, "
++                    f"MeanReward[{len(self._recent_rewards) if self.window > 1 else 1}]: {avg_reward:.2f}"
++                )
++                self._recent_rewards = []
++                self.print_count+=1
++        return True
++
++def main():
++    parser = argparse.ArgumentParser()
++    parser.add_argument("--env_id", type=str, default="Humanoid-v4")
++    parser.add_argument("--total_timesteps", type=int, default=2_000_000)
++    parser.add_argument("--checkpoint_interval", type=int, default=200_000)
++    parser.add_argument("--eval_freq", type=int, default=200_000)
++    parser.add_argument("--eval_episodes", type=int, default=1)
++    parser.add_argument("--logdir", type=str, default="runs")
++    parser.add_argument("--models_dir", type=str, default="checkpoints")
++    parser.add_argument("--videos_dir", type=str, default="videos")
++    parser.add_argument("--print_window", type=int, default=500)
++    parser.add_argument("--wandb_project", type=str, default="Guided_RL")
++    parser.add_argument("--wandb_entity", type=str, default="")
++    parser.add_argument("--wandb_run_name", type=str, default=None)
++
++    args = parser.parse_args()
++
++    timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
++    run_dir = os.path.join(args.logdir, timestamp)
++    models_dir = os.path.join(run_dir, args.models_dir)
++    videos_dir = os.path.join(run_dir, args.videos_dir)
++    eval_log_dir = os.path.join(run_dir, "eval")
++
++    os.makedirs(models_dir, exist_ok=True)
++    os.makedirs(videos_dir, exist_ok=True)
++    os.makedirs(eval_log_dir, exist_ok=True)
++
++    # ---- Training env (no rendering; fast) ----
++    train_env = DummyVecEnv([lambda: make_train_env(args.env_id)])
++
++    # ---- Eval env (records video during each eval) ----
++    eval_env_raw = make_eval_env(args.env_id, videos_dir)
++    eval_env = DummyVecEnv([lambda: eval_env_raw])
++
++    # ---- Model ----
++    model = PPO(
++        "MlpPolicy",
++        train_env,
++        device="auto",                 # CPU on laptop, GPU on cluster
++        verbose=0,
++    )
++
++    # ---- Callbacks ----
++    checkpoint_cb = CheckpointCallback(
++        save_freq=args.checkpoint_interval,
++        save_path=models_dir,
++        name_prefix="humanoid_ppo",
++        save_replay_buffer=False,
++        save_vecnormalize=False,
++    )
++
++    eval_cb = EvalCallback(
++        eval_env,
++        best_model_save_path=models_dir,    # also saves best model
++        log_path=eval_log_dir,
++        eval_freq=args.eval_freq,
++        n_eval_episodes=args.eval_episodes,
++        deterministic=True,
++        render=False,  # rendering handled by RecordVideo wrapper
++    )
++
++
++    console_cb = ConsoleLogCallback(window=args.print_window)
++    callbacks_list = [checkpoint_cb, eval_cb, console_cb]
++
++    wandb_run = None
++    if args.wandb_project:
++        api_key = os.environ.get("WANDB_API_KEY")
++        if api_key:
++            wandb.login(key=api_key, relogin=True)
++        else:
++            print("⚠️ Set WANDB_API_KEY in your env for non-interactive wandb auth.")
++            wandb.login()
++        wandb_run = wandb.init(
++            project=args.wandb_project,
++            # entity=args.wandb_entity,
++            name=args.wandb_run_name or timestamp,
++            config={
++                "env_id": args.env_id,
++                "total_timesteps": args.total_timesteps,
++                "checkpoint_interval": args.checkpoint_interval,
++                "eval_freq": args.eval_freq,
++                "eval_episodes": args.eval_episodes,
++                "print_window": args.print_window,
++            },
++            monitor_gym=True,
++            save_code=True,
++        )
++        callbacks_list.append(
++            WandbCallback(model_save_path=None, gradient_save_freq=0, verbose=0)
++        )
++
++    callbacks = CallbackList(callbacks_list)
++
++    # ---- Train ----
++    model.learn(total_timesteps=args.total_timesteps, callback=callbacks)
++
++    # ---- Final save ----
++    final_path = os.path.join(models_dir, "final_policy")
++    model.save(final_path)
++    if wandb_run is not None:
++        wandb_run.finish()
++    print(f"✅ Finished. Final model saved to: {final_path}")
++    print(f"📁 Run directory: {run_dir}")
++    print(f"📼 Videos saved in: {videos_dir}")
++    print(f"💾 Checkpoints in: {models_dir}")
++    print(f"🪵 Eval logs in: {eval_log_dir}")
++
++
++if __name__ == "__main__":
++    main()

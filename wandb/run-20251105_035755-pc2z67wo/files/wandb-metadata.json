@@ -1,0 +1,46 @@
+{
+  "os": "Linux-6.12.10-76061203-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.14",
+  "startedAt": "2025-11-05T08:57:55.251017Z",
+  "args": [
+    "--env_id",
+    "Walker2d-v4",
+    "--total_timesteps",
+    "1000000",
+    "--checkpoint_interval",
+    "100000",
+    "--eval_freq",
+    "100000",
+    "--eval_episodes",
+    "1",
+    "--logdir",
+    "runs/walker2d",
+    "--models_dir",
+    "checkpoints/walker2d",
+    "--videos_dir",
+    "videos/walker2d"
+  ],
+  "program": "/home/mzoellner/Projects/research/guided-rl/src/train_humanoid.py",
+  "codePath": "src/train_humanoid.py",
+  "codePathLocal": "src/train_humanoid.py",
+  "git": {
+    "remote": "git@github.com:moritz-zoellner/guided-rl.git",
+    "commit": "b9faa3962f42333c037d8cc0e4b4ffc0e4170e11"
+  },
+  "email": "zoellner.moritz@web.de",
+  "root": "/home/mzoellner/Projects/research/guided-rl",
+  "host": "pop-os",
+  "executable": "/home/mzoellner/miniconda3/envs/guided-rl/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "disk": {
+    "/": {
+      "total": "973818466304",
+      "used": "121233313792"
+    }
+  },
+  "memory": {
+    "total": "32875732992"
+  },
+  "writerId": "1h9ufd6f0z7h98w633r1m18uagn6ts48"
+}
