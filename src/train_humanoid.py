@@ -63,9 +63,9 @@ class ConsoleLogCallback(BaseCallback):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--env_id", type=str, default="Humanoid-v4")
-    parser.add_argument("--total_timesteps", type=int, default=2_000_000)
-    parser.add_argument("--checkpoint_interval", type=int, default=200_000)
-    parser.add_argument("--eval_freq", type=int, default=200_000)
+    parser.add_argument("--total_timesteps", type=int, default=200_000)
+    parser.add_argument("--checkpoint_interval", type=int, default=40_000)
+    parser.add_argument("--eval_freq", type=int, default=40_000)
     parser.add_argument("--eval_episodes", type=int, default=1)
     parser.add_argument("--logdir", type=str, default="runs")
     parser.add_argument("--models_dir", type=str, default="checkpoints")
@@ -106,7 +106,7 @@ def main():
     checkpoint_cb = CheckpointCallback(
         save_freq=args.checkpoint_interval,
         save_path=models_dir,
-        name_prefix="humanoid_ppo",
+        name_prefix=args.env_id,
         save_replay_buffer=False,
         save_vecnormalize=False,
     )
@@ -162,11 +162,12 @@ def main():
     model.save(final_path)
     if wandb_run is not None:
         wandb_run.finish()
-    print(f"✅ Finished. Final model saved to: {final_path}")
-    print(f"📁 Run directory: {run_dir}")
-    print(f"📼 Videos saved in: {videos_dir}")
-    print(f"💾 Checkpoints in: {models_dir}")
-    print(f"🪵 Eval logs in: {eval_log_dir}")
+    print(f"Finished. Final model saved to: {final_path}")
+    print(f"Run directory: {run_dir}")
+    print(f"Videos saved in: {videos_dir}")
+    print(f"Checkpoints in: {models_dir}")
+    print(f" Eval logs in: {eval_log_dir}")
+
 
 
 if __name__ == "__main__":
