@@ -1,0 +1,15 @@
+#!/bin/sh
+#SBATCH -J humanoid_expert
+#SBATCH -A rpaleja
+#SBATCH -p a100-40gb
+#SBATCH --gpus-per-node=1
+#SBATCH --mem=32G
+#SBATCH -t 24:00:00
+#SBATCH -o slurm-%j.out
+
+module load conda
+conda activate /scratch/gilbreth/zoellner/conda/envs/guided_rl
+
+echo "Starting humanoid traing via SLURM"
+python ~/src/guided-rl/src/train_humanoid.py
+echo "Finished training?" 

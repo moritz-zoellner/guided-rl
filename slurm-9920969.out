@@ -1,0 +1,169 @@
+Starting humanoid traing via SLURM
+/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /home/zoellner/src/guided-rl/runs/20251111-185508/videos folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)[0m
+  logger.warn(
+wandb: Currently logged in as: zoellner-moritz (zoellner) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.22.3
+wandb: Run data is saved locally in /home/zoellner/src/guided-rl/wandb/run-20251111_185519-srw7056d
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run 20251111-185508
+wandb: ⭐️ View project at https://wandb.ai/zoellner/Guided_RL
+wandb: 🚀 View run at https://wandb.ai/zoellner/Guided_RL/runs/srw7056d
+wandb: WARNING Fatal error while uploading data. Some run data will not be synced, but it will still be written to disk. Use `wandb sync` at the end of the run to try uploading.
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'Failed to detect any supported platform'
+  warnings.warn(message, GLFWError)
+/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65537) b'The GLFW library is not initialized'
+  warnings.warn(message, GLFWError)
+⚠️ Set WANDB_API_KEY in your env for non-interactive wandb auth.
+Time_step: 518, MeanReward[24]: 104.82
+Time_step: 1013, MeanReward[22]: 109.15
+Time_step: 1528, MeanReward[24]: 105.10
+Time_step: 2012, MeanReward[22]: 106.68
+Time_step: 2513, MeanReward[21]: 116.11
+Time_step: 3008, MeanReward[25]: 95.48
+Time_step: 3504, MeanReward[24]: 101.79
+Time_step: 4009, MeanReward[23]: 107.00
+Time_step: 4517, MeanReward[23]: 107.81
+Time_step: 5004, MeanReward[21]: 111.43
+Time_step: 5509, MeanReward[20]: 122.38
+Time_step: 6012, MeanReward[21]: 117.33
+Time_step: 6539, MeanReward[22]: 116.44
+Time_step: 7003, MeanReward[21]: 108.52
+Time_step: 7527, MeanReward[21]: 121.36
+Time_step: 8016, MeanReward[23]: 102.94
+Time_step: 8505, MeanReward[21]: 113.75
+Time_step: 9023, MeanReward[23]: 109.56
+Time_step: 9515, MeanReward[21]: 114.68
+Time_step: 10017, MeanReward[22]: 111.91
+Time_step: 10523, MeanReward[20]: 122.52
+Time_step: 11020, MeanReward[20]: 122.68
+Time_step: 11519, MeanReward[21]: 115.78
+Time_step: 12008, MeanReward[21]: 114.10
+Time_step: 12518, MeanReward[18]: 138.04
+Time_step: 13011, MeanReward[19]: 127.64
+Time_step: 13526, MeanReward[20]: 123.92
+Time_step: 14008, MeanReward[18]: 132.17
+Time_step: 14528, MeanReward[20]: 126.33
+Time_step: 15005, MeanReward[19]: 122.74
+Time_step: 15514, MeanReward[22]: 112.79
+Time_step: 16001, MeanReward[21]: 113.17
+Time_step: 16519, MeanReward[20]: 127.06
+Time_step: 17026, MeanReward[20]: 123.87
+Time_step: 17508, MeanReward[18]: 129.62
+Time_step: 18021, MeanReward[17]: 146.98
+Time_step: 18505, MeanReward[21]: 111.13
+Time_step: 19020, MeanReward[17]: 146.99
+Time_step: 19513, MeanReward[20]: 120.65
+Time_step: 20016, MeanReward[17]: 146.55
+Time_step: 20515, MeanReward[17]: 144.11
+Time_step: 21029, MeanReward[15]: 164.91
+Time_step: 21556, MeanReward[17]: 152.04
+Time_step: 22005, MeanReward[16]: 134.12
+Time_step: 22547, MeanReward[18]: 147.88
+Time_step: 23012, MeanReward[16]: 141.99
+Time_step: 23508, MeanReward[15]: 162.34
+Time_step: 24033, MeanReward[16]: 160.93
+Time_step: 24533, MeanReward[18]: 137.13
+Time_step: 25018, MeanReward[16]: 147.79
+Time_step: 25522, MeanReward[15]: 167.49
+Time_step: 26008, MeanReward[15]: 160.19
+Time_step: 26510, MeanReward[14]: 177.21
+Time_step: 27002, MeanReward[15]: 162.48
+Time_step: 27508, MeanReward[14]: 179.61
+Time_step: 28018, MeanReward[15]: 168.54
+Time_step: 28519, MeanReward[15]: 165.79
+Time_step: 29011, MeanReward[14]: 174.11
+Time_step: 29522, MeanReward[14]: 179.70
+Time_step: 30016, MeanReward[14]: 176.01
+Time_step: 30529, MeanReward[17]: 148.23
+Time_step: 31036, MeanReward[15]: 163.58
+Time_step: 31509, MeanReward[16]: 145.44
+Time_step: 32004, MeanReward[13]: 185.21
+Time_step: 32523, MeanReward[14]: 181.61
+Time_step: 33009, MeanReward[12]: 198.46
+Time_step: 33527, MeanReward[13]: 193.49
+Time_step: 34042, MeanReward[15]: 174.04
+Time_step: 34511, MeanReward[13]: 177.13
+Time_step: 35038, MeanReward[14]: 185.99
+Time_step: 35505, MeanReward[13]: 177.87
+Time_step: 36009, MeanReward[11]: 229.47
+Time_step: 36504, MeanReward[12]: 200.01
+Time_step: 37006, MeanReward[14]: 174.77
+Time_step: 37548, MeanReward[14]: 190.73
+Time_step: 38013, MeanReward[11]: 209.56
+Time_step: 38508, MeanReward[11]: 219.79
+Time_step: 39020, MeanReward[13]: 191.52
+Time_step: 39527, MeanReward[11]: 229.59
+Traceback (most recent call last):
+  File "/home/zoellner/src/guided-rl/src/train_humanoid.py", line 174, in <module>
+    main()
+  File "/home/zoellner/src/guided-rl/src/train_humanoid.py", line 158, in main
+    model.learn(total_timesteps=args.total_timesteps, callback=callbacks)
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/ppo/ppo.py", line 315, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 300, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/on_policy_algorithm.py", line 201, in collect_rollouts
+    if not callback.on_step():
+           ^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/callbacks.py", line 114, in on_step
+    return self._on_step()
+           ^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/callbacks.py", line 219, in _on_step
+    continue_training = callback.on_step() and continue_training
+                        ^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/callbacks.py", line 114, in on_step
+    return self._on_step()
+           ^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/callbacks.py", line 460, in _on_step
+    episode_rewards, episode_lengths = evaluate_policy(
+                                       ^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/evaluation.py", line 84, in evaluate_policy
+    observations = env.reset()
+                   ^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 77, in reset
+    obs, self.reset_infos[env_idx] = self.envs[env_idx].reset(seed=self._seeds[env_idx], **maybe_options)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/stable_baselines3/common/monitor.py", line 83, in reset
+    return self.env.reset(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/wrappers/record_video.py", line 129, in reset
+    self.start_video_recorder()
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/wrappers/record_video.py", line 148, in start_video_recorder
+    self.video_recorder.capture_frame()
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/wrappers/monitoring/video_recorder.py", line 113, in capture_frame
+    frame = self.env.render()
+            ^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/core.py", line 471, in render
+    return self.env.render()
+           ^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/wrappers/order_enforcing.py", line 70, in render
+    return self.env.render(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/wrappers/env_checker.py", line 65, in render
+    return env_render_passive_checker(self.env, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/utils/passive_env_checker.py", line 362, in env_render_passive_checker
+    result = env.render()
+             ^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/envs/mujoco/mujoco_env.py", line 409, in render
+    return self.mujoco_renderer.render(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/envs/mujoco/mujoco_rendering.py", line 646, in render
+    viewer = self._get_viewer(render_mode=render_mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/envs/mujoco/mujoco_rendering.py", line 686, in _get_viewer
+    self.viewer = OffScreenViewer(self.model, self.data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/envs/mujoco/mujoco_rendering.py", line 144, in __init__
+    super().__init__(model, data, width, height)
+  File "/scratch/gilbreth/zoellner/conda/envs/guided_rl/lib/python3.11/site-packages/gymnasium/envs/mujoco/mujoco_rendering.py", line 61, in __init__
+    self.con = mujoco.MjrContext(self.model, mujoco.mjtFontScale.mjFONTSCALE_150)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mujoco.FatalError: an OpenGL platform library has not been loaded into this process, this most likely means that a valid OpenGL context has not been created before mjr_makeContext was called
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33m20251111-185508[0m at: [34m[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20251111_185519-srw7056d/logs[0m
+Finished training?
